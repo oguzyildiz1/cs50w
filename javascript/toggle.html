@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+    <head>
+        <title>Toggle</title>
+
+        <script>
+            // toggle between hello and goodbye
+
+            function toggle() {
+                //select
+                const heading = document.querySelector('h1');
+
+                // if hello change ot goodbye
+                if (heading.innerHTML === 'Hello!') {
+                    heading.innerHTML = 'Goodbye!';
+                } else {
+                    heading.innerHTML = 'Hello!';
+                }
+            }
+
+        </script>
+    </head>
+    <body>
+
+        <h1>Hello!</h1>
+        <button onclick="toggle()">Click Here!</button>
+
+    </body>
+
+
+</html>
