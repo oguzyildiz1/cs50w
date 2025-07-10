@@ -1,0 +1,76 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+    <head>
+        <title>Open Close Menu</title>
+        <style>
+            :root {
+                color-scheme: light dark;
+            }
+            body {
+                color: light-dark(#333b3c, #efefec);
+                background-color: light-dark(#efedea, #223a2c);
+            }
+
+            #main {
+                min-height: calc(160px - 16px);
+                background-color: #ec6111;
+                padding: 1rem;
+                font-size: larger;
+            }
+            .bd {
+                border: 1px solid #223a2c;
+            }
+            .ib{
+                display: inline-block;
+            }
+            .menu {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+                width: 25%;
+            }
+            .menu > li {
+                padding: 0.2rem;
+                margin: 0;
+                border-bottom: 2px solid rgb(210, 172, 172) ;
+            }
+            .menu > li > a {
+                display: block;
+            }
+
+            .icon {
+                padding: 0.3rem;
+                border:2px solid #223a2c75;
+                border-radius: 0.3rem;
+            }
+
+        </style>
+        <script>
+            //i am going to toggle the menu on and off
+            // it will hava an icon 
+            // it will collapse and return
+
+            // on and off
+
+        </script>
+    </head>
+
+    <body>
+
+        <div id="main">
+            <div class="icon bd ib">Icon</div>
+            <ul class="menu bd">
+                <li><a href="">Menu 1</a></li>
+                <li><a href="">Menu 2</a></li>
+                <li><a href="">Menu 3</a></li>
+                <li><a href="">Menu 4</a></li>
+            </ul>
+        </div>
+
+
+    </body>
+
+
+</html>
