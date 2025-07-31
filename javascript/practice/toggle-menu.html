@@ -8,6 +8,11 @@
             :root {
                 color-scheme: light dark;
             }
+
+            *, * > * {
+                outline: 1px solid white;
+            }
+
             body {
                 color: light-dark(#333b3c, #efefec);
                 background-color: light-dark(#efedea, #223a2c);
@@ -36,9 +41,6 @@
                 margin: 0;
                 border-bottom: 2px solid rgb(210, 172, 172) ;
             }
-            .menu > li > a {
-                display: block;
-            }
 
             .icon {
                 padding: 0.3rem;
@@ -46,6 +48,7 @@
                 border-radius: 0.3rem;
                 color: #333;
             }
+
 
         </style>
         <script>
@@ -60,16 +63,63 @@
     <body>
 
         <div id="main">
-            <div class="icon ">Icon</div>
-            <ul class="menu ">
-                <li class="menu-item"><a href=""></a></li>
-                <li class="menu-item"><a href=""></a></li>
-                <li class="menu-item"><a href=""></a></li>
-                <li class="menu-item"><a href=""></a></li>
+            <div class="icon">Icon</div>
+            <ul class="menu" id="menuTop">
+                <li class="menu-item">menu 1</li>
+                <li class="menu-item">menu 2</li>
+                <li class="menu-item">menu 3</li>
+                <li class="menu-item">menu 4</li>
             </ul>
+        </div>
+    
+        <div id="result" style="background-color:yellow;width:200px;height:200px;color:black">
+            test
+        </div>
+        <div id="result2" style="background-color:rgb(182, 182, 213);width:200px;height:200px;color:black">
+            test2
         </div>
 
 
+        <script>
+        
+            let result = document.querySelector('#result');  // seçildi
+            result.style.color = "green"; // works
+            let ul = document.createElement('ul');
+            ul.innerHTML='<li>Hi</li>'; //ul'ye ekle
+            // result'a  ekle
+            result.appendChild(ul); // sorunsuz oldu
+            //ul.appendChild(result);
+
+            // result2 için 
+            
+            const menu2 = document.querySelectorAll('#menu li');  // üst menu 
+            let result2 = document.querySelector('#result2');  // result 2 box'u
+            result2.style.color = "red";
+            
+            
+            
+            let ul2 = document.createElement('ul');
+            ul2.innerHTML='<li>Hi</li>'; //ul'ye ekle
+            // result'a  ekle
+            result2.appendChild(ul2); // sorunsuz oldu
+            //ul.appendChild(result);
+            // buraya kadar çalıştı
+            
+            // ana menuyu sec
+
+            const menuTopList = document.querySelectorAll('#menuTop > li');
+            //console.log(menuTopList);
+            // const listItems = document.querySelectorAll('menuTopList li')
+            
+            menuTopList.forEach((item) => {
+                // li oluştur resulta ekle
+                //let liTopValue = this.innerHTML;
+                console.log(item.outerText);
+            });
+            
+            //TO DO: add lis' values to new div by reading outer text values...
+            // ex<: 
+        </script>
     </body>
 
 
