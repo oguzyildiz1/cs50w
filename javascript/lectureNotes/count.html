@@ -10,12 +10,24 @@
         }
     </style>
     <script>
+        // count the number of clicks
+        let count = 0;
 
+<<<<<<< HEAD
         let counter = 0;
         
         function count(){
             counter++;
             document.querySelector('h1').innerHTML = counter;
+=======
+        function count() {
+            // increment the count
+            count++;
+            // select the h1 element
+            const heading = document.querySelector('h1');
+            // update the text content of the h1 element
+            heading.textContent = count;
+>>>>>>> 667805780ce7451141ec0c7138205afb0913b1c9
         }
 
     </script>

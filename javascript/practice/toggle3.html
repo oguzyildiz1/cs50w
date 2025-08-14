@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+    <head>
+        <title>Toggle</title>
+
+        <script>
+            //i am going to toggle between two things
+
+            //choose element
+            //create toggle function
+            // add toggle to event on click
+
+            function toggle(){
+
+                const listItem = document.querySelector('ul>li');
+                // change it with if 'günaydın dünya'
+                if ( listItem.innerHTML === 'Selam Dünya'){
+
+                    listItem.innerHTML = 'Günaydın Dünya';
+                } else {
+                    listItem.innerHTML = 'Selam Dünya';
+                }
+                // 
+            }
+
+            // on and off
+
+        </script>
+    </head>
+    <body>
+
+        <ul>
+            <li>Selam Dünya</li>
+        </ul>
+
+        <button onclick="toggle()">Click here!</button>
+
+
+    </body>
+
+
+</html>
