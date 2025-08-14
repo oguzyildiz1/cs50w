@@ -16,6 +16,10 @@
         function count(){
             counter++;
             document.querySelector('h1').innerHTML = counter;
+
+            if (counter % 3 === 0) {
+                 alert(`Count is now ${counter}`);
+            }
         }
 
     </script>
