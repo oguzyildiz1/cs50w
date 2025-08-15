@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <div id="div1">A</div>
+    
+    <script>
+        const names = {
+            name : 'Orhan',
+            surname : 'Yıldız'
+        }
+
+        let surname = 'Orhan';
+        let space = 'Ankara';
+        // document.querySelector('body').innerHTML = `<p>Welcome ${surname}</p>`;
+
+        let div1 = document.querySelector('#div1');
+        
+        // --------- creating p tags ------
+        for (let i = 0; i < 10; i++) { 
+            if (i % 2 === 0) {
+                div1.innerHTML += `<p>Welcome to my ${space}</p>`;
+            }
+
+            div1.innerHTML += `<p>Welcome to home ${names.name}</p>`;
+        }
+
+        // ----------- styling p tags --------
+        let paragraphs = document.querySelectorAll('p');
+            // console.log(paragraphs);
+        paragraphs.forEach(function(parag) {
+            parag.style.color = 'red';
+            if(parag.innerHTML == 'Welcome to my Ankara') {
+                parag.style.color = 'green';
+            }
+            /*if (parag.innerTEXT == 'Welcome to my Ankara') {
+                parag.innerTEXT = 'hi';
+                    // this.style.backgroundColor = 'green';
+            }*/
+        });
+
+        makeRed(paragraphs);
+    </script>
+</body>
+</html>
