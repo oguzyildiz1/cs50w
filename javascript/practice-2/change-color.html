@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" style="color-scheme: light dark;">
+	<head>
+		<title>Change color</title>
+		
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+			
+				// change the color of h1
+				const heading1 = document.querySelector('h1');
+				
+				// create function and addEventListener
+				document.querySelectorAll('button').forEach(function(button) {
+					
+					button.onclick = function() {					
+						// access data attr of buttons
+						let color = button.dataset.color; // red
+						heading1.style.color = color;
+					}
+				});
+				
+				
+			});
+		</script>
+	</head>
+	<body>
+		<h1>Hello Oğuzhan</h1>
+		
+		<button data-color="red">Red</button>
+		<button data-color="green">Green</button>
+		<button data-color="blue">Blue</button>
+	</body>
+</html>

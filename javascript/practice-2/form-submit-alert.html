@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html style="color-scheme: light dark;">
+	<head>
+		<title>
+			Dom Content Loaded
+		</title>
+		<style>
+			body {
+				color: light-dark(#333b3c, #efefec);			  background-color: light-dark(#efedea, #223a2c);
+			}
+		</style>
+		<script>
+			document.addEventListener('DOMContentLoaded', function(){
+				// get value of input
+				
+				document.querySelector('form').onsubmit = function() {
+					// choose input-text
+					const name = document.querySelector('input#name').value;
+					const surname = document.querySelector('input#surname').value;
+					// alert it
+					alert(`Hello ${name} ${surname}!`);
+				}
+				
+			});
+		</script>
+	</head>
+	<body>
+
+		<!-- form submit alert it -->
+		
+		<h1>Giriş Formu</h1>
+		
+		<form>
+			<input autofocus placeholder="Ad" type="text" id="name">
+			<input type="text" placeholder="Soyadı" id="surname">
+			<input type="submit" >
+		</form>
+		
+		<script>
+
+		</script>
+	</body>
+</html>
