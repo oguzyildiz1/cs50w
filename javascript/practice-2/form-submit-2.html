@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+            form submit
+		</title>
+        <style>
+			input[type=text]{
+				color: red;
+			}
+            ul > li:hover {
+                background-color: black;
+                color: white !important;
+                cursor: pointer;
+            }
+            #list-cont{
+                width: 25%;
+            }
+            button {
+                visibility: hidden;
+            }
+		</style>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+    </head>
+    <body>
+        <h3>Alttaki Mesajlara Tıklayın</h3>
+		<p></p>
+
+		<form id="cars">
+			<input id="carname" type="text" placeholder="mesaj">
+			<input type="submit">
+		</form>
+
+        <div id="list-cont">
+            <ul>
+                <li>Naber nasıl gidiyor</li>
+                <li>İyiyim ya senden</li>
+                <li>Sağol bende iyiyim</li>
+            </ul>
+        </div>
+		
+        <button id="btn">Click</button>
+		
+		<script>
+			$("#btn").click(clicked);
+
+            // TO DO: click on a list item and it displays its msg in the text area
+
+            // choose list items
+            const listItems = $("ul > li");
+            listItems.css("color", "blue");
+
+            // get their values
+            // alert(listItems[0].innerText);
+
+            // click func
+            listItems.click(updateValue);
+
+            // update value of the text input
+
+
+			
+			function clicked() { // when clicked to button
+				$("#carname").css("background-color","red" ).css("color","green");
+				
+				var carsForm = $("#carname");
+				alert(carsForm.value);
+			}
+			
+            function updateValue(){
+                $("#carname").value 
+            }
+
+		</script>
+    </body>
+</html>
